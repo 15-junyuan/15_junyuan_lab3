@@ -40,11 +40,18 @@ public class BasketMovementScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        //collision with healthy food
         if (other.gameObject.tag == "Healthy")
         {
             Score =+ Score + 10;
             Scoretxt.text = "Score: " + Score;
             Destroy(other.gameObject);
+        }
+
+        //collision with Unhealthy food
+        if(other.gameObject.tag == "Unhealthy")
+        {
+            SceneManager.LoadScene("LoseScene");
         }
     }
 
