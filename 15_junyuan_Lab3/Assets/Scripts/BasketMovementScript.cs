@@ -36,6 +36,7 @@ public class BasketMovementScript : MonoBehaviour
             transform.position = new Vector3(7.069f, transform.position.y, transform.position.z);
         }
 
+     
     }
 
     private void OnCollisionEnter(Collision other)
@@ -46,6 +47,11 @@ public class BasketMovementScript : MonoBehaviour
             Score =+ Score + 10;
             Scoretxt.text = "Score: " + Score;
             Destroy(other.gameObject);
+
+            if(Score >= 150)
+            {
+                SceneManager.LoadScene("WinScene");
+            }
         }
 
         //collision with Unhealthy food
