@@ -6,12 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class BasketMovementScript : MonoBehaviour
 {
+    //player speed//
     public float speed;
+    //Score//
     int Score;
 
+    //Text
     public Text Scoretxt;
-    
-   
+
+    //Audio//
+    public AudioSource audioSource;
+    public AudioClip audioclip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +50,7 @@ public class BasketMovementScript : MonoBehaviour
         //collision with healthy food
         if (other.gameObject.tag == "Healthy")
         {
+            audioSource.PlayOneShot(audioclip);
             Score =+ Score + 10;
             Scoretxt.text = "Score: " + Score;
             Destroy(other.gameObject);
@@ -57,6 +64,7 @@ public class BasketMovementScript : MonoBehaviour
         //collision with Unhealthy food
         if(other.gameObject.tag == "Unhealthy")
         {
+            audioSource.PlayOneShot(audioclip);
             SceneManager.LoadScene("LoseScene");
         }
     }

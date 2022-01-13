@@ -9,7 +9,10 @@ public class Spawner : MonoBehaviour
     private float spawndelay=1;
     private int randomInt;
     float positionx;
-   
+
+    //audio
+    public AudioSource audiosource;
+    public AudioClip clip;
 
     
 
@@ -38,7 +41,9 @@ public class Spawner : MonoBehaviour
         positionx = Random.Range(8f,-8f);
         this.transform.position = new Vector3(positionx,transform.position.y , transform.position.z);
         Instantiate(spawnee[randomInt], transform.position, transform.rotation);
-   
+
+        //play clip
+        audiosource.PlayOneShot(clip);
 
     }
 }
