@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasketMovementScript : MonoBehaviour
 {
     public float speed;
+    int Score;
 
-    
+    public Text Scoretxt;
     
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        Scoretxt.text = "Score: " + Score;
     }
 
     // Update is called once per frame
@@ -35,9 +38,14 @@ public class BasketMovementScript : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.tag == "Healthy")
+        {
+            Score =+ Score + 10;
+            Scoretxt.text = "Score: " + Score;
+            Destroy(other.gameObject);
+        }
     }
 
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7102251068751694037}
   - component: {fileID: 3102895891193010865}
   - component: {fileID: 4858788930253998642}
-  - component: {fileID: 4072267333307905634}
+  - component: {fileID: -8798361516511138450}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Healthy
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc78e0686fc074da08b21203d9088b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &4072267333307905634
+--- !u!65 &-8798361516511138450
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

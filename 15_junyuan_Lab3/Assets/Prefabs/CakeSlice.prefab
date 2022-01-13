@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7756817202223465562}
   - component: {fileID: 152170372664471218}
   - component: {fileID: 1540363562266257181}
-  - component: {fileID: 3124712945637169795}
+  - component: {fileID: -4636756853850937063}
   m_Layer: 0
   m_Name: CakeSlice
   m_TagString: Unhealthy
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc78e0686fc074da08b21203d9088b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &3124712945637169795
+--- !u!65 &-4636756853850937063
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,5 +106,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 17.570698, y: 16.352465, z: 0.20000002}
-  m_Center: {x: 0.0000011920929, y: 0.4196316, z: 0}
+  m_Size: {x: 38.72, y: 25.92047, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
